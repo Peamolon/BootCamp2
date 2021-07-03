@@ -17,7 +17,7 @@ class PostsController < ApplicationController
         @post = Post.new(content: params[:post][:content], 
                          seen: params[:post][:seen], 
                          expire: d)
-        
+         @post.owner_id = current_user.id
         
        if @post.seen == '0'
             @post.seen = 'No visto'
