@@ -1,0 +1,64 @@
+// Place all the styles related to the welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+.link_to_class{
+  font-family: aril, helvetica;
+  background: #e8e8e8;
+}
+
+.nav-enlace{
+   
+   
+    padding: 10px 30px;
+    border-radius: 2px;
+    text-decoration: none;
+     color: red;
+    
+}
+
+
+.header li a{
+    height: 60px;
+    color: white;
+    font-weight: bold;
+    padding-left: 40px;
+
+
+}
+
+.nav-li{
+    display: inline-block;
+    list-style: none;
+}
+
+.header{
+    background: blue;
+    height: 50px;
+    text-align: center;
+    font-size: 20px;
+    list-style: none;
+}
+
+.clases btn-signin{
+    color: white;
+}
+
+.form-inputs{
+    text-align: center;
+    
+}
+
+.form_input-label{
+     background: red;
+}
+.form-actions{
+    text-align: center;
+
+}
+
+.custom-class{
+    background: red;
+    height: 200px;
+}
+
+

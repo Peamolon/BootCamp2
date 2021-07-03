@@ -1,0 +1,21 @@
+<%= render "header" %>
+
+<h2>All announcements</h2>
+<table>
+    <tr>
+        <th>Content</th>
+        <th>expire</th>
+        <th>seen</th>
+    </tr>
+
+<% @posts.each do |poster| %>
+    <tr>
+        <td><%= link_to poster.content, poster %></td>
+        <td><%= poster.expire %></td>
+        <td><%= poster.seen %></td>
+        <td><%= link_to "Delete", poster , method: :delete ,data: {confirm: "Are you sure?"} %> </td>
+        <td><%= link_to "Edit", edit_post_path(poster) %> </td>
+    </tr>
+
+<% end %>
+</table>

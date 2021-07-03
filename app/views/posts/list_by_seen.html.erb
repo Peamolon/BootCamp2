@@ -1,0 +1,19 @@
+ <%= render "header" %>
+<h1> Not seen announcements</h1>
+
+<table>
+    <tr>
+        <th>Content</th>
+        <th>expire</th>
+        <th>seen</th>
+    </tr>
+
+<% @posts_filter.each do |post| %>
+    <tr>
+        <td><%= post.content %></td>
+        <td><%= post.expire %></td>
+        <td><%= post.seen %></td>
+    </tr>
+
+<% end %>
+</table>

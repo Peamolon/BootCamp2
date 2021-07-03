@@ -1,0 +1,33 @@
+<div style="width: 80%; margin: 0 auto;">
+ <h1> <%= nombre %> anuncio</h1>
+<%= form_for(@post) do |f| %>
+<% @post.errors.full_messages.each do |message| %>
+ <div class= "be-red">
+  * <%= message%>
+  
+ </div>
+<% end %>
+
+ <%= f.label "Ingrese el contenido" %>
+ <div class = "field">
+    
+     <%= f.text_area :content, placeholder: "Contenido", class:"form-control" %>
+ </div>
+ <%= f.label "Visto" %>
+  <div class = "seen">
+      
+     <%= f.check_box :seen, placeholder: "Seen", class:"form-control"%>
+ </div>
+  <%= f.label "Fecha de expiración" %>
+  <div class = "expirate">
+      
+     <%= f.date_select :expire, placeholder: "Seen", class:"form-control"%>
+ </div>
+ 
+   <div class = "field">
+     <%= f.submit nombre , class: "btn"%>
+ </div>
+    
+
+<% end %>
+ </div>
