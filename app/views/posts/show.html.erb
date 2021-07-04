@@ -1,6 +1,22 @@
 <%= render "header" %>
-<h1><%= @post.content %></h1>
+<header>
+    <div class="form-div-h1">
+        <h1>Your announcement was created successfully</h1>
+     </div>
+     <% (1..10).each do |f| %>
+         <br>
+     <% end %>
+ 
+    <div class="form-div">
+    <h4><%='Content: '+ @post.content %></h4>
 
-<h1><%= @post.seen %></h1>
+    <h4><%= 'Seen:    '+@post.seen %></h4>
 
-<h1><%= @post.expire %></h1>
+    <h4><%= 'Expiration date:    '+ @post.expire.to_s %></h4>
+
+    <%= link_to 'Send Notification',remote: true %>
+    
+    </div>
+    
+</header>
+

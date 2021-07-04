@@ -6,6 +6,7 @@ class PostsController < ApplicationController
     #Get /posts/id
     def show
         @post = Post.find(params[:id])
+       ActionCable.server.broadcast('notification_channel', 'You have visited the welcome page.')
     end
     
     def new
@@ -18,6 +19,7 @@ class PostsController < ApplicationController
                          seen: params[:post][:seen], 
                          expire: d)
          @post.owner_id = current_user.id
+
         
        if @post.seen == '0'
             @post.seen = 'No visto'
